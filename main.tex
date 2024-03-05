@@ -1,0 +1,89 @@
+\documentclass[aspectratio=169]{beamer}
+% \documentclass{beamer}
+\setbeamertemplate{footline}{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex]{date in
+head/foot}%
+    \hspace*{1ex} \insertframenumber{} / \inserttotalframenumber
+  \end{beamercolorbox}}%
+\setbeamertemplate{navigation symbols}{}
+
+\mode<presentation>
+{
+   \useoutertheme{infolines}
+%    \usetheme{Singapore}
+  \usetheme{Boadilla}
+%  \usetheme[secheader]{Boadilla}
+    \useinnertheme[shadow]{rounded}
+%   \subject{Informatik}
+}
+
+% \mode<handout>
+% {
+%   \usetheme{Montpellier}
+%   \usecolortheme{dove}
+% %   \usepackage{pgfpages}
+%   \pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=5mm]
+% }
+
+
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{eurosym}
+\usepackage{graphicx}
+\usepackage{ulem}
+\usepackage{listings}
+\usepackage{beamerfoils}
+\lstset{numbers=left, numberstyle=\tiny, stepnumber=2, numbersep=5pt, language = html}
+% \usepackage[markup=nocolor,deletedmarkup=xout]{changes}
+
+\title{Aggregatfunktionen in SQL}
+
+\author{Thomas Maul}
+\institute[BWS Hofheim]{Brühlwiesenschule, Hofheim}
+
+% \date[09.11.22] % (optional)
+% {09. November 22}
+
+ \MyLogo{\includegraphics[height=1cm]{bwslogo_3.png}}
+% \MyLogo{\includegraphics[height=1cm]{../../../bilder/bwslogo_3.png}}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+ % \hyperlink{Teil_2}{\beamerbutton{Go part 2}}
+\end{frame}
+\begin{frame}
+  \frametitle{Statistik}
+  \begin{itemize}
+    \item Summe einer Spalte
+    \item Mittelwert, kleinster, größter Wert
+    \item Anzahl
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Aggregatfunktionen}
+  \begin{description}
+    \item[sum] Summe aller Werte: select sum(Spalte) \dots
+    \item[Kleinster] select min(Spalte) \dots;
+    \item[Größter] select max(Spalte) \dots;
+    \item[Anzahl] Anzahl der Zeilen: select count(Spalte) \dots
+  \end{description}
+  Ergebnis ist immer eine Zeile
+\end{frame}
+
+\begin{frame}
+  \frametitle{und was soll \dots\  bedeuten?}
+  \begin{itemize}
+    \item Eingrenzen mit where
+    \item Group by
+  \end{itemize}
+\end{frame}
+
+  
+\end{document}
+
